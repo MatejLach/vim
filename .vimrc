@@ -18,8 +18,8 @@ catch
 endtry
 
 " set GViM font
-if has("gui_gtk2")
-    set guifont=Source-Code-Pro\ 22
+if has('gui_running')
+  set guifont=set guifont=Source\ Code\ Pro\ Semi-Bold\ 30
 endif
 " set GViM size
 if has("gui_running")
@@ -65,6 +65,15 @@ set switchbuf=usetab,newtab
 
 
 "" Shortcuts ""
+" New file
+nnoremap <C-n> :new<CR>
+" Open file
+nnoremap <C-o> :FufFile<CR>
+" Close buffer
+nnoremap <C-q> :bd!<CR>
+" Set <Tab> to 4 spaces
+set shiftwidth=4
+set tabstop=4
 " Remap quicksave
 noremap <C-w> :update<CR>
 vnoremap <C-w> <C-C>:update<CR>
@@ -85,7 +94,6 @@ vmap <C-w> S
 vmap <C-x> d
 vmap <C-v> p
 vmap <C-c> y
-" Undo, Redo
 " Tabs
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1

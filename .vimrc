@@ -133,3 +133,10 @@ set clipboard=unnamed
 set bs=2
 " Autoreload .vimrc
 autocmd! bufwritepost .vimrc source %
+
+
+" GitHub Gist settings "
+" The settings are self-explanatory
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1 
+let g:gist_post_private = 1

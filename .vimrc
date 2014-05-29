@@ -126,9 +126,10 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 
 "" Misc ""
-" Airline
-set laststatus=2
-let g:airline_powerline_fonts = 1
+" airline
+set laststatus=2  "Always show
+let g:airline_powerline_fonts = 1  "Use Powerline fonts
+set fillchars+=stl:\ ,stlnc:\ 
 " man plugin
 source /usr/share/vim/vim74/ftplugin/man.vim
 " View manpages using Vim

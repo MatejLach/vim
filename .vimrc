@@ -94,6 +94,8 @@ vmap <C-w> S
 vmap <C-x> d
 vmap <C-v> p
 vmap <C-c> y
+" Gundo - undo tree
+nnoremap <F9> :GundoToggle<CR>
 " Tabs
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1
@@ -105,6 +107,10 @@ nnoremap <C-t>  :tabnew<CR>
 inoremap <C-t>  <Esc>:tabnew<CR>i
 nnoremap <C-k>  :tabclose<CR>
 inoremap <C-k>  <Esc>:tabclose<CR>i
+" Snippets
+let g:UltiSnipsExpandTrigger="<F6>"
+let g:UltiSnipsJumpForwardTrigger="<F7>"
+let g:UltiSnipsJumpBackwardTrigger="<F5>"
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 
@@ -120,9 +126,9 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 
 "" Misc ""
-" Poweline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" Airline
 set laststatus=2
+let g:airline_powerline_fonts = 1
 " man plugin
 source /usr/share/vim/vim74/ftplugin/man.vim
 " View manpages using Vim

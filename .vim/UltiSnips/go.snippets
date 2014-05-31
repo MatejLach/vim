@@ -1,87 +1,353 @@
-snippet	float32 "float32"
-float32
+# Keywords
+
+snippet break "Breaks out of a for loop"
+break
 endsnippet
 
-snippet float64 "float64"
-float64
+snippet case "Used in a 'switch' statement"
+case
 endsnippet
 
-snippet int "int"
-int
+snippet chan "Define a channel"
+chan
 endsnippet
 
-snippet int8 "int8"
-int8
+snippet const "Constant declaration"
+const
 endsnippet
 
-snippet int16 "int16"
-int16
+snippet continue "Executes the next iteration of a for loop"
+continue
 endsnippet
 
-snippet int32 "int32"
-int32
+snippet defer "Defer statement execution"
+defer
 endsnippet
 
-snippet int64 "int64"
-int64
+snippet else "Else statement"
+else
 endsnippet
 
-snippet uint "uint"
-uint
+snippet fallthrough "Transfers control to the first statement of the next case clause"
+fallthrough
 endsnippet
 
-snippet uint "uint8"
-uint8
+snippet go "Starts a goroutine"
+go
 endsnippet
 
-snippet uint16 "uint16"
-uint16
+snippet goto "Transfers control to the statement with the corresponding label"
+goto
 endsnippet
 
-snippet uint32 "uint32"
-uint32
+snippet range "Used in an indexing statement"
+range
 endsnippet
 
-snippet uint64 "uint64"
-uint64
-endsnippet
-
-snippet uintptr "uintptr"
-uintptr
-endsnippet
-
-snippet string "string"
-string
-endsnippet
-
-snippet rune "rune"
-rune
-endsnippet
-
-snippet real "real"
-real
-endsnippet
-
-snippet complex64 "complex64"
-complex64
-endsnippet
-
-snippet complex128 "complex128"
-complex128
-endsnippet
-
-snippet fmt "fmt"
-fmt
-endsnippet
-
-snippet main "main"
-main
-endsnippet
-
-snippet return "return"
+snippet return "Returns value from a function"
 return
 endsnippet
 
-snippet range "range"
-range
+snippet type "Used with structs to define custom types"
+type
+endsnippet
+
+
+# Types
+
+snippet bool "1 byte"
+bool
+endsnippet
+
+snippet true "boolean true"
+true
+endsnippet
+
+snippet false "boolean false"
+false
+endsnippet
+
+snippet	float32 "4 bytes"
+float32
+endsnippet
+
+snippet float64 "8 bytes"
+float64
+endsnippet
+
+snippet int "alias for int64"
+int
+endsnippet
+
+snippet int8 "1 byte"
+int8
+endsnippet
+
+snippet int16 "2 bytes"
+int16
+endsnippet
+
+snippet int32 "4 bytes"
+int32
+endsnippet
+
+snippet int64 "8 bytes"
+int64
+endsnippet
+
+snippet uint "alias for uint32/64"
+uint
+endsnippet
+
+snippet uint "unsigned - 1 byte"
+uint8
+endsnippet
+
+snippet uint16 "unsigned - 2 bytes"
+uint16
+endsnippet
+
+snippet uint32 "unsigned - 4 bytes"
+uint32
+endsnippet
+
+snippet uint64 "unsigned - 8 bytes"
+uint64
+endsnippet
+
+snippet uintptr "holds bit pattern of a pointer"
+uintptr
+endsnippet
+
+snippet string "UTF-8 encoded"
+string
+endsnippet
+
+snippet rune "alias for int32 - 4 bytes"
+rune
+endsnippet
+
+snippet byte "alias for uint8 - 1 byte"
+byte
+endsnippet
+
+snippet complex64 "complex float - 8 bytes"
+complex64
+endsnippet
+
+snippet complex128 "complex float - 16 bytes"
+complex128
+endsnippet
+
+
+# Functions
+
+snippet append() "appends elements to a slice"
+append
+endsnippet
+
+snippet new() "allocates memory, returns a pointer"
+new
+endsnippet
+
+snippet cap() "returns the capacity of an element"
+cap
+endsnippet
+
+snippet panic() "stops execution of current goroutine"
+panic
+endsnippet
+
+snippet close() "closes a channel"
+close
+endsnippet
+
+snippet real() "returns real part of a complex number"
+real
+endsnippet
+
+snippet complex() "constructs a complex from 2 floats"
+complex
+endsnippet
+
+snippet recover() "manages behavior of a panicking goroutine"
+recover
+endsnippet
+
+snippet copy() "copies source slice into a destination slice"
+copy
+endsnippet
+
+snippet delete() "deletes element with the given key from map"
+delete
+endsnippet
+
+snippet imag() "returns the imaginary part of complex number"
+imag
+endsnippet
+
+snippet len() "returns the length of an element"
+len
+endsnippet
+
+
+# Standard library
+
+snippet archive "for working with tar/zip archives"
+"archive"
+endsnippet
+
+snippet debug "to assist with debugging"
+"debug"
+endsnippet
+
+snippet hash "interfaces for hash functions"
+"hash"
+endsnippet
+
+snippet mime "implements parts of the MIME spec"
+"mime"
+endsnippet
+
+snippet sort "primitives for sorting"
+"sort"
+endsnippet
+
+snippet time "for manipulating time"
+"time"
+endsnippet
+
+snippet bufio "implements buffered I/O"
+"bufio"
+endsnippet
+
+snippet encoding "defines interfaces that convert data"
+"encoding"
+endsnippet
+
+snippet html "functions for escaping and unescaping HTML"
+"html"
+endsnippet
+
+snippet net "provides a portable interface for network I/O"
+"net"
+endsnippet
+
+snippet strconv "implements conversions to and from strings"
+"strconv"
+endsnippet
+
+snippet unicode "data and functions to test Unicode"
+"unicode"
+endsnippet
+
+snippet bytes "functions for manipulation of byte slices"
+"bytes"
+endsnippet
+
+snippet errors "functions to manipulate errors"
+"errors"
+endsnippet
+
+snippet image "basic 2-D image library"
+"image"
+endsnippet
+
+snippet os "interface to operating system functionality"
+"os"
+endsnippet
+
+snippet strings "simple functions to manipulate strings"
+"strings"
+endsnippet
+
+snippet unsafe "operations that step around type safety"
+"unsafe"
+endsnippet
+
+snippet compress "compression functions"
+"compress"
+endsnippet
+
+snippet expvar "standardized interface to public variables"
+"expvar"
+endsnippet
+
+snippet index "indexing functions"
+"index"
+endsnippet
+
+snippet path "utility routines for manipulating paths"
+"path"
+endsnippet
+
+snippet sync "basic synchronization primitives"
+"sync"
+endsnippet
+
+snippet container "implements some container types"
+"container"
+endsnippet
+
+snippet flag "command-line flag parsing"
+"flag"
+endsnippet
+
+snippet io "basic interfaces to I/O primitives"
+"io"
+endsnippet
+
+snippet reflect "run-time reflection"
+"reflect"
+endsnippet
+
+snippet syscall "interface to operating system primitives"
+"syscall"
+endsnippet
+
+snippet crypto "collects common cryptographic constants"
+"crypto"
+endsnippet
+
+snippet fmt "for formatting I/O"
+"fmt"
+endsnippet
+
+snippet log "a simple logging package"
+"log"
+endsnippet
+
+snippet regexp "implements regular expression search"
+"regexp"
+endsnippet
+
+snippet testing "testing of Go packages"
+"testing"
+endsnippet
+
+snippet database "work with sql databases"
+"database"
+endsnippet
+
+snippet go "functionality related to Go"
+"go"
+endsnippet
+
+snippet math "basic mathematical functions"
+"math"
+endsnippet
+
+snippet runtime "operations that interact with Go's runtime"
+"runtime"
+endsnippet
+
+snippet text "functions for working with text"
+"text"
+endsnippet
+
+
+# Misc
+
+snippet main "package/function"
+main
 endsnippet

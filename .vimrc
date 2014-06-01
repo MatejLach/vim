@@ -107,6 +107,13 @@ nnoremap <C-t>  :tabnew<CR>
 inoremap <C-t>  <Esc>:tabnew<CR>i
 nnoremap <C-k>  :tabclose<CR>
 inoremap <C-k>  <Esc>:tabclose<CR>i
+" Windows
+nmap <F2> :wincmd k<CR>
+nmap <F3> :wincmd j<CR>
+nmap <F1> :wincmd h<CR>
+nmap <F4> :wincmd l<CR>
+:nmap ^[+ :res +1^M
+:nmap ^[- :res -1^M
 " Snippets
 let g:UltiSnipsExpandTrigger="<F6>"
 let g:UltiSnipsJumpForwardTrigger="<F7>"

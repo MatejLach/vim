@@ -1,4 +1,4 @@
-"" The Absolute Must ""
+"" The Absolute Must
 syntax on
 set encoding=utf-8
 set fileformats=unix,dos,mac " UNIX first
@@ -8,7 +8,7 @@ filetype plugin indent on
 execute pathogen#infect()
 
 
-"" User Interface ""
+"" User Interface
 " 256 colour support
 set t_Co=256
 " Colour theme
@@ -44,7 +44,7 @@ set noerrorbells " disable beeps
 set backspace=indent,eol,start
 " I know what I am doing
 set noswapfile
-set nobackup " Yes, I am serious
+set nobackup " Yes, I am serious, use Git instead
 " Show me what I'm doing
 set showcmd
 " Show me the current mode
@@ -55,8 +55,6 @@ set autowrite
 set autoread
 " Show search results while typing
 set incsearch
-" Highlight found search results
-set hlsearch
 " Search should not be case sensitive
 set ignorecase
 set smartcase " unless I explicitly search for upcase characters
@@ -64,7 +62,7 @@ set smartcase " unless I explicitly search for upcase characters
 set switchbuf=usetab,newtab
 
 
-"" Shortcuts ""
+"" Shortcuts
 " New file
 nnoremap <C-n> :new<CR>
 " Open file
@@ -75,8 +73,8 @@ nnoremap <C-q> :bd!<CR>
 set shiftwidth=4
 set tabstop=4
 " Remap quicksave
-noremap <C-w> :update<CR>
-vnoremap <C-w> <C-C>:update<CR>
+noremap <C-u> :update<CR>
+vnoremap <C-u> <C-C>:update<CR>
 " Remap quit command
 noremap <C-e> :quit<CR>
 " Find
@@ -112,8 +110,11 @@ nmap <F2> :wincmd k<CR>
 nmap <F3> :wincmd j<CR>
 nmap <F1> :wincmd h<CR>
 nmap <F4> :wincmd l<CR>
-:nmap ^[+ :res +1^M
-:nmap ^[- :res -1^M
+" Buffers
+if bufwinnr(1)
+  map + <C-W>+
+  map - <C-W>-
+endif
 " Snippets
 let g:UltiSnipsExpandTrigger="<F6>"
 let g:UltiSnipsJumpForwardTrigger="<F7>"
@@ -121,7 +122,7 @@ let g:UltiSnipsJumpBackwardTrigger="<F5>"
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 
-"" Golang specific shortcuts ""
+"" Golang specific shortcuts
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <leader>r <Plug>(go-run)
@@ -130,6 +131,7 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
 
 " lightline.vim config
 " statusline always enabled
@@ -201,8 +203,7 @@ set bs=2
 " Autoreload .vimrc
 autocmd! bufwritepost .vimrc source %
 
-
-" GitHub Gist settings "
+" GitHub Gist settings
 " The settings are self-explanatory
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1 

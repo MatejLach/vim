@@ -60,6 +60,9 @@ set ignorecase
 set smartcase " unless I explicitly search for upcase characters
 " Always open a new buffer in new tab
 set switchbuf=usetab,newtab
+" Set <Tab> to 4 spaces
+set shiftwidth=4
+set tabstop=4
 
 
 "" Shortcuts
@@ -67,11 +70,13 @@ set switchbuf=usetab,newtab
 nnoremap <C-n> :new<CR>
 " Open file
 nnoremap <C-o> :FufFile<CR>
+" NERDTree
+nnoremap <C-p> :NERDTree<CR>
+let NERDTreeWinSize = 22
 " Close buffer
 nnoremap <C-q> :bd!<CR>
-" Set <Tab> to 4 spaces
-set shiftwidth=4
-set tabstop=4
+" Tagbar
+nmap <S-s> :TagbarToggle<CR>
 " Remap quicksave
 noremap <C-u> :update<CR>
 vnoremap <C-u> <C-C>:update<CR>
@@ -119,8 +124,7 @@ endif
 let g:UltiSnipsExpandTrigger="<F6>"
 let g:UltiSnipsJumpForwardTrigger="<F7>"
 let g:UltiSnipsJumpBackwardTrigger="<F5>"
-" Tagbar
-nmap <F8> :TagbarToggle<CR>
+
 
 "" Golang specific shortcuts
 au FileType go nmap <Leader>gd <Plug>(go-doc)

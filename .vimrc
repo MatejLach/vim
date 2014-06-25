@@ -113,8 +113,8 @@ inoremap <C-k>  <Esc>:tabclose<CR>i
 " Windows
 nmap <F2> :wincmd k<CR>
 nmap <F3> :wincmd j<CR>
-nmap <F1> :wincmd h<CR>
-nmap <F4> :wincmd l<CR>
+nmap <F11> :wincmd h<CR>
+nmap <F12> :wincmd l<CR>
 " Buffers
 if bufwinnr(1)
   map + <C-W>+

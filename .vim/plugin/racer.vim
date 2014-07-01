@@ -10,7 +10,7 @@
 
 
 if !exists('g:racer_cmd')
-    let g:racer_cmd = "/home/matejlach/.vim/bundle/racer/bin/racer"
+    let g:racer_cmd = "/home/matejlach/racer/bin/racer"
 endif
 
 if !exists($RUST_SRC_PATH)

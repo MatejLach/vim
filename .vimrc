@@ -3,6 +3,8 @@ syntax on
 set encoding=utf-8
 set fileformats=unix,dos,mac " UNIX first
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
+set hidden
 
 " pathogen
 execute pathogen#infect()
@@ -210,5 +212,5 @@ autocmd! bufwritepost .vimrc source %
 " GitHub Gist settings
 " The settings are self-explanatory
 let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1 
+let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1

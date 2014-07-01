@@ -1,7 +1,7 @@
-My Go-centric ViM setup
+My Go/Rust-centric ViM setup
 ==
 
-![ViM as Go IDE](.github/vim-github_golang_ide.png)
+![ViM shown as Go IDE](.github/vim-github_golang_ide.png)
 
 This setup includes everything you'd expect for productive Go development; from project-aware autocompletion to integration of *go* tools, such as *gofmt* and *dodoc*.
 
@@ -25,6 +25,7 @@ This setup includes everything you'd expect for productive Go development; from 
 - vim-snippets
 - webapi-vim
 - YouCompleteMe
+- racer.vim
 
 P.S. The colourscheme is the 256 colour version of vim-desert (256desert).
 

@@ -1,4 +1,4 @@
-Golang-centric ViM development environment:
+Golang-centric ViM development:
 ==
 
 ![ViM shown as Go IDE](.github/vim-github_golang_ide.png)

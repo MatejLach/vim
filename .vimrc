@@ -74,11 +74,40 @@ nnoremap <C-n> :new<CR>
 nnoremap <C-o> :FufFile<CR>
 " NERDTree
 nnoremap <C-p> :NERDTree<CR>
-let NERDTreeWinSize = 22
+let NERDTreeWinSize = 20
 " Close buffer
 nnoremap <C-q> :bd!<CR>
+
 " Tagbar
 nmap <S-s> :TagbarToggle<CR>
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
 " Remap quicksave
 noremap <C-u> :update<CR>
 vnoremap <C-u> <C-C>:update<CR>

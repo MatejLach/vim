@@ -73,7 +73,7 @@ nnoremap <C-n> :new<CR>
 " Open file
 nnoremap <C-o> :FufFile<CR>
 " NERDTree
-nnoremap <C-p> :NERDTree<CR>
+nnoremap <S-p> :NERDTree<CR>
 let NERDTreeWinSize = 20
 " Close buffer
 nnoremap <C-q> :bd!<CR>

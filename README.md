@@ -1,4 +1,4 @@
-My Go/Rust-centric ViM setup
+Golang-centric ViM development environment:
 ==
 
 ![ViM shown as Go IDE](.github/vim-github_golang_ide.png)

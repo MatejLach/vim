@@ -12,19 +12,21 @@ This setup includes everything you'd expect for productive Go development; from 
 - FuzzyFinder
 - gist-vim
 - gundo
+- mru
 - l9.vim
 - lightline.vim
 - nerdtree
 - pathogen.vim
-- rust.vim
 - syntastic
 - tagbar
+- GoldenView
 - ultisnips
 - vim-fugitive
 - vim-go
 - vim-snippets
 - webapi-vim
 - YouCompleteMe
+- rust.vim
 - racer.vim
 
 P.S. The colourscheme is the 256 colour version of vim-desert (256desert).

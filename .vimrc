@@ -15,7 +15,7 @@ execute pathogen#infect()
 set t_Co=256
 " Colour theme
 try
-    colorscheme desert256
+    colorscheme babymate256
 catch
 endtry
 

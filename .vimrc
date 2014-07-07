@@ -4,7 +4,6 @@ set encoding=utf-8
 set fileformats=unix,dos,mac " UNIX first
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
-set hidden
 
 " pathogen
 execute pathogen#infect()
@@ -227,6 +226,9 @@ endfunction
 
 
 "" Misc
+" golint
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 " man plugin
 source /usr/share/vim/vim74/ftplugin/man.vim
 " View manpages using Vim

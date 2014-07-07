@@ -29,6 +29,6 @@ This setup includes everything you'd expect for productive Go development; from 
 - rust.vim
 - racer.vim
 
-P.S. The colourscheme is the 256 colour version of vim-desert (256desert).
+P.S. The colourscheme is babymate256.
 
 Enjoy!

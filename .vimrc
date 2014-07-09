@@ -226,9 +226,6 @@ endfunction
 
 
 "" Misc
-" golint
-set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
-autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 " man plugin
 source /usr/share/vim/vim74/ftplugin/man.vim
 " View manpages using Vim

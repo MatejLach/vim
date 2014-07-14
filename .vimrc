@@ -14,7 +14,7 @@ execute pathogen#infect()
 set t_Co=256
 " Colour theme
 try
-    colorscheme babymate256
+    colorscheme grb256
 catch
 endtry
 
@@ -61,9 +61,11 @@ set ignorecase
 set smartcase " unless I explicitly search for upcase characters
 " Always open a new buffer in new tab
 set switchbuf=usetab,newtab
-" Set <Tab> to 4 spaces
-set shiftwidth=4
+" Indent
+set smartindent
+set expandtab
 set tabstop=4
+set shiftwidth=4
 
 
 "" Shortcuts

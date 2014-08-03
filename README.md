@@ -1,12 +1,18 @@
-[Golang](http://golang.org)-centric ViM dev-environment:
+[Rust](http://rust-lang.org) & [Golang](http://golang.org) ViM dev-environment:
 ==
 
 ![ViM as can be used for productive Go development](.github/vim-github_golang_ide.png)
 
-This setup includes everything you'd expect for productive Go development; from project-aware autocompletion to integration of *go* tools, such as *gofmt* and *dodoc*.
+**Screenshot:** - productive Go development ¬
+
+**About:**
+ViM configuration for productive Rust and Golang development, including syntax highlighting, indentation, autocompletion and ctags support.
+It also includes a set of convinient plugins for project management as well as for aesthetics.
 
 **Included plugins**:
 
+- rust.vim
+- racer.vim (experimental autocompletion for rust, requires [racer](https://github.com/phildawes/racer))
 - colorschemes
 - delimitMate
 - FuzzyFinder
@@ -26,11 +32,6 @@ This setup includes everything you'd expect for productive Go development; from 
 - vim-snippets
 - webapi-vim
 - YouCompleteMe
-
-
-**Experimental plugins/not related to Go**:
-- rust.vim (not Go but looks great, so why not have support for it?)
-- racer.vim (experimental autocompletion for rust - may/may not work for you, requires [racer](https://github.com/phildawes/racer))
 
 P.S. The colourscheme in the screenshot may differ from my current colourscheme in .vimrc.
 

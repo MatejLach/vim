@@ -54,6 +54,8 @@ set showmode
 set autowrite
 " Auto-read outside changes
 set autoread
+" Auto-change to current dir
+set autochdir 
 " Show search results while typing
 set incsearch
 " Search should not be case sensitive
@@ -62,8 +64,6 @@ set smartcase " unless I explicitly search for upcase characters
 " Always open a new buffer in new tab
 set switchbuf=usetab,newtab
 " Indent
-set smartindent
-set expandtab
 set tabstop=4
 set shiftwidth=4
 
@@ -79,8 +79,12 @@ let NERDTreeWinSize = 20
 " Close buffer
 nnoremap <C-q> :bd!<CR>
 
+" Tags
+set tags=tags;
+
 " Tagbar
 nmap <S-s> :TagbarToggle<CR>
+" Go specific settings
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [

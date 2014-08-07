@@ -13,8 +13,8 @@ if !exists('g:racer_cmd')
     let g:racer_cmd = "/home/matejlach/racer/bin/racer"
 endif
 
-if !exists($RUST_SRC_PATH)
-    let $RUST_SRC_PATH="/usr/local/src/rust/src"
+if !exists('$RUST_SRC_PATH')
+    let $RUST_SRC_PATH="/home/matejlach/rust/src"
 endif
 
 function! racer#GetPrefixCol()
@@ -28,6 +28,29 @@ function! racer#GetPrefixCol()
     let prefixline = split(res, "\\n")[0]
     let startcol = split(prefixline[7:], ",")[0]
     return startcol
+endfunction
+
+function! racer#GetExpCompletions()
+    let col = b:racer_col      " use the column from the previous racer#GetPrefixCol() call, since vim ammends it afterwards
+    let fname = expand("%:p")
+    let tmpfname=fname.".racertmp"
+    let cmd = g:racer_cmd." complete ".line(".")." ".col." ".tmpfname
+    let res = system(cmd)
+    let lines = split(res, "\\n")
+    let out = []
+    for line in lines
+        let completions = matchlist(line, '\v^MATCH ([^,]+),([^,]+),([^,]+),([^,]+),([^,]+),(.+)$')
+        if len(completions) == 0
+            continue
+        endif
+        let completion = {'word' : completions[1], 'kind' :completions[5][0]}
+        if completion.kind == "F"
+            let completion.menu = matchstr(completions[6], '\v(\(.*)([^{])')
+        endif
+        let out = add(out, completion)
+    endfor
+    call delete(tmpfname)
+    return out
 endfunction
 
 function! racer#GetCompletions()
@@ -78,11 +101,11 @@ function! racer#JumpToLocation(filename, linenum, colnum)
     endif
 endfunction
 
-"   Vec::
-
 function! racer#Complete(findstart, base)
     if a:findstart
         return racer#GetPrefixCol()
+    elseif exists('g:racer_experimental_completer')
+        return racer#GetExpCompletions()
     else
         return racer#GetCompletions()
     endif

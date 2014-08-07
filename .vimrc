@@ -4,6 +4,7 @@ set encoding=utf-8
 set fileformats=unix,dos,mac " UNIX first
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
+set completeopt+=menu
 
 " pathogen
 execute pathogen#infect()
@@ -14,7 +15,7 @@ execute pathogen#infect()
 set t_Co=256
 " Colour theme
 try
-    colorscheme grb256
+    colorscheme xoria256 
 catch
 endtry
 
@@ -66,6 +67,7 @@ set switchbuf=usetab,newtab
 " Indent
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 
 "" Shortcuts

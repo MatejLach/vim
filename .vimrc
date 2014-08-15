@@ -21,21 +21,7 @@ endtry
 
 " set GViM font
 if has('gui_running')
-  set guifont=set guifont=Source\ Code\ Pro\ Semi-Bold\ 30
-endif
-" set GViM size
-if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize gvim window.
-  set lines=999 columns=999
-else
-  " This is console Vim.
-  if exists("+lines")
-    set lines=50
-  endif
-  if exists("+columns")
-    set columns=122
-  endif
+  set guifont=set guifont=Source\ Code\ Pro\ Semi-Bold\ 24
 endif
 
 " line numbering

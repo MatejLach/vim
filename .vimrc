@@ -3,8 +3,7 @@ syntax on
 set encoding=utf-8
 set fileformats=unix,dos,mac " UNIX first
 filetype plugin indent on
-set omnifunc=syntaxcomplete#Complete
-set completeopt+=menu
+let g:neocomplcache_enable_at_startup = 1
 
 " pathogen
 execute pathogen#infect()
@@ -41,8 +40,6 @@ set showmode
 set autowrite
 " Auto-read outside changes
 set autoread
-" Auto-change to current dir
-set autochdir 
 " Show search results while typing
 set incsearch
 " Search should not be case sensitive
@@ -69,37 +66,11 @@ nnoremap <C-q> :bd!<CR>
 
 " Tags
 set tags=tags;
-
 " Tagbar
 nmap <S-s> :TagbarToggle<CR>
-" Go specific settings
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+
+" Autocomplete with <TAB>
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Remap quicksave
 noremap <C-u> :update<CR>
@@ -150,7 +121,41 @@ let g:UltiSnipsJumpForwardTrigger="<F7>"
 let g:UltiSnipsJumpBackwardTrigger="<F5>"
 
 
-"" Golang specific shortcuts
+" Haskell options
+let g:haskell_conceal_wide = 1
+let g:haskell_multiline_strings = 1
+let g:necoghc_enable_detailed_browse = 1
+
+
+" Go specific settings
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+" Golang specific shortcuts
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <leader>r <Plug>(go-run)

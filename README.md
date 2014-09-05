@@ -11,7 +11,7 @@ It also includes a set of convinient plugins for project management as well as f
 
 **Included plugins**:
 
-See [.vim/bundle](this) and [.vim/plugin](this) for a list of included plugins. 
+See [this](.vim/bundle) and [this](.vim/plugin) for a list of included plugins. 
 
 P.S. The colourscheme in the screenshot may differ from my current colourscheme in .vimrc.
 
